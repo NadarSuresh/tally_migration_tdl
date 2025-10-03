@@ -82,7 +82,7 @@
 		
 		[Line: SEND_Account]
 			
-			Field: SEND_Account_name, SEND_Account_doctype, SEND_Account_group
+			Field: SEND_Account_name, SEND_Account_doctype, SEND_Account_group, SEND_Account_primary_group
 			Field: SEND_company
 
 			JSONTag: "data"
@@ -103,6 +103,11 @@
 
 				Set as: $Parent + " - " + @@EnableERPNextCmpAbbr
 				JSONTag : "parent_account"
+			
+			[Field: SEND_Account_primary_group]
+
+				Set as: $PrimaryGroup
+				JSONTag : "primary_group"
 
 [Collection: SEND_Account_Tally]
 	
